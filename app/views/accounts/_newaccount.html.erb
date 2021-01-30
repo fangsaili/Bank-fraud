@@ -1,0 +1,38 @@
+<style type="text/css">
+	.information{
+		margin-left:10px;
+    color: black;
+	}
+</style>
+<div class = information>
+<%= form_for([@user, @user.accounts.build]) do |form| %>
+
+
+
+<p>
+  <%= form.label :name %>
+  <%= form.text_field :name ,:value =>(('a'..'z').to_a).shuffle[0,8].join%>
+</p>
+
+<p>
+  <%= form.label :email %>
+  <%= form.text_field :email ,:value =>(((('a'..'z').to_a).shuffle[0,4].join)+(((0..9).to_a).shuffle[0,4].join)+"@kcl.ac.uk")%>
+</p>
+
+  <p>
+    <%= form.label :password %>
+    <%= form.text_field :password ,:value =>(('a'..'z').to_a + (0..9).to_a + ('A'..'Z').to_a ).shuffle[0,10].join%>
+  </p>
+
+  <p>
+    <%= form.label :balance %>
+    <%= form.text_field :balance ,:value => 100%>
+  </p>
+
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
+</div>

@@ -1,0 +1,32 @@
+
+<p>
+  <strong>Date:</strong>
+  <%= @transaction.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @transaction.description %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @transaction.amount %>
+</p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @transaction.balance %>
+</p>
+
+<p>
+  <strong>ceateTime:</strong>
+  <%= @transaction.created_at %>
+</p>
+
+<p>
+  <strong>updateTime:</strong>
+  <%= @transaction.updated_at %>
+</p>
+<%= link_to 'Edit', edit_transaction_path(@transaction) %>
+<%= link_to 'Back', admin_path(@account) %>

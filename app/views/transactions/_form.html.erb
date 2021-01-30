@@ -1,0 +1,50 @@
+<h1>Listing transactions</h1>
+<table id="transactions">
+  <tr>
+    <th>Sender</th>
+    <th>Payee</th>
+    <th>Date</th>
+    <th>Currency</th>
+    <th>Description</th>
+    <th>Amount</th>
+    <th>Balance</th>
+  </tr>
+  <% @account.transactions.order(date: :desc).each do |transaction| %>
+    <tr>
+      <td><%= transaction.sender %></td>
+      <td><%= transaction.payee %></td>
+      <td><%= transaction.date %></td>
+      <td><%= transaction.currency %></td>
+      <td><%= transaction.description %></td>
+      <td><%= transaction.amount %></td>
+      <td><%= transaction.balance %></td>
+      <td><%= link_to 'Show', transaction_path(transaction) %></td>
+      <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+      <td><%= link_to 'Destroy', transaction_path(transaction),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<style>
+
+#transactions{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+#transactions th, #transactions td{
+    text-align: left;
+    padding: 12px;
+}
+
+#transactions tr{/* Table adds border */
+    border-bottom: 1px solid #ddd;
+}
+#transactions tr.header, #transactions tr:hover{/* Add background when the header and mouse move over TR */
+    background-color: #f1f1f1;
+}
+
+
+</style>

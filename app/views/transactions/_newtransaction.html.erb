@@ -1,0 +1,52 @@
+<style type="text/css">
+	.information{
+		margin-left:10px;
+    color: black;
+	}
+</style>
+<div class = information>
+<%= form_for([@account, @account.transactions.build]) do |f| %>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @account.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= Time.now %>
+</p>
+
+<p>
+  <%= f.label :sender %><br>
+  <%= f.text_field :sender ,:value => "sender"%>
+</p>
+
+<p>
+  <%= f.label :payee %><br>
+  <%= f.text_field :payee ,:value => "payer"%>
+</p>
+
+
+  <p>
+    <%= f.label :currency %><br>
+    <%= f.select :currency, [['EUR', 'EUR'],['GBP', 'GBP'],['USD', 'USD']]%>
+  </p>
+
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description ,:value => "pay"%>
+  </p>
+
+  <p>
+    <%= f.label :amount %><br><%= %>
+    <%= f.text_field :amount ,:value => @amount=100%>
+  </p>
+
+
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>

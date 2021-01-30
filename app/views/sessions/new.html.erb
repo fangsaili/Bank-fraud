@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1981398221,3412154454&fm=26&gp=0.jpg">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Simple Login Form with Blue Background</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel= "stylesheet" type="text/css" href="css/bootstrap.css">
+<style type="text/css">
+    .img{
+      position:absolute;
+      left:200px;
+      top:150px;
+    }
+    .button1{
+      position:absolute;
+      left:300px;
+      top:550px;
+    }
+    .button2{
+      position:absolute;
+      left:600px;
+      top:550px;
+    }
+    .button3{
+      position:absolute;
+      left:900px;
+      top:550px;
+    }
+    .b1{
+      position:absolute;
+      left:306px;
+      top:605px;
+    }
+    .b2{
+      position:absolute;
+      left:597px;
+      top:605px;
+    }
+    .b3{
+      position:absolute;
+      left:894px;
+      top:605px;
+    }
+    .advertisement1{
+        font-size: 60px;
+        text-shadow: 0 0 10px rgb(255, 255, 255);
+        color: #3598dc;
+        position:absolute;
+        left:820px;
+        top:220px;
+    }
+    .advertisement2{
+        font-size: 40px;
+        text-shadow: 0 0 2px white;
+        color: #005cfa;
+        position:absolute;
+        left:875px;
+        top:320px;
+    }
+</style>
+<style>
+    body {
+		font-family: 'Varela Round', sans-serif;
+    color: #fff;
+		background: #3598dc;
+	}
+  .navbar {
+		font-size: 14px;
+		background: #fff;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-bottom: 1px solid #3598dc;
+		box-shadow: 0 0 4px rgba(0,0,0,.1);
+	}
+	.navbar .navbar-brand {
+		color: #3598dc;
+		padding-left: 0;
+		font-size: 20px;
+		padding-right: 50px;
+		font-family: 'Raleway', sans-serif;
+		text-transform: uppercase;
+	}
+  .navbar .navbar-brand b {
+		font-weight: bold;
+		color: #3598dc;
+	}
+	.navbar ul.nav li {
+		font-size: 96%;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.navbar ul.nav li.active a, .navbar ul.nav li.active a:hover, .navbar ul.nav li.active a:focus {
+		color: #3598dc !important;
+		background: transparent !important;
+	}
+  .search-box {
+        position: relative;
+    }
+	.search-box input.form-control, .search-box .btn {
+		font-size: 14px;
+		border-radius: 2px !important;
+	}
+	.search-box .input-group-btn {
+		padding-left: 4px;
+	}
+	.search-box input.form-control:focus {
+		border-color: #3598dc;
+		box-shadow: 0 0 8px rgba(240,79,1,0.2);
+	}
+  .search-box .btn-primary, .search-box .btn-primary:active {
+		font-weight: bold;
+		background: #3598dc;
+		border-color: #3598dc;
+		text-transform: uppercase;
+		min-width: 90px;
+	}
+	.search-box .btn-primary:focus {
+		outline: none;
+		background: #3598dc;
+		box-shadow: 0 0 8px rgba(240,79,1,0.2);
+	}
+	.search-box .btn span {
+		transform: scale(0.9);
+		display: inline-block;
+	}
+  .navbar ul li i {
+  font-size: 18px;
+}
+.navbar .dropdown-menu i {
+  font-size: 16px;
+  min-width: 22px;
+}
+.navbar .dropdown.open > a {
+  background: none !important;
+}
+.navbar .dropdown-menu {
+  border-radius: 1px;
+  border-color: #3598dc;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+.navbar .dropdown-menu li a {
+  color: #777;
+  padding: 8px 20px;
+  line-height: normal;
+  font-size: 14px;
+}
+.navbar .dropdown-menu li a:hover, .navbar .dropdown-menu li a:active {
+  color: #333;
+}
+.navbar .navbar-form {
+  border: none;
+}
+	.modal-login {
+		color: #636363;
+		width: 350px;
+		margin: 50px auto;
+	}
+	.modal-login .modal-content {
+		padding: 20px;
+		border-radius: 5px;
+		border: none;
+	}
+	.modal-login .modal-header {
+		border-bottom: none;
+		position: relative;
+		justify-content: center;
+	}
+	.modal-login h4 {
+		text-align: center;
+		font-size: 26px;
+	}
+  a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  }
+	.modal-login  .form-group {
+		position: relative;
+	}
+	.modal-login .form-control {
+		padding-left: 40px;
+	}
+	.modal-login .form-control:focus {
+		border-color: #00ce81;
+	}
+	.modal-login .form-control, .modal-login .btn {
+		min-height: 40px;
+		border-radius: 3px;
+	}
+	.modal-login .hint-text {
+		text-align: center;
+		padding-top: 10px;
+	}
+	.modal-login .close {
+        position: absolute;
+		top: -5px;
+		right: -5px;
+	}
+	.modal-login .btn {
+		background: #00ce81;
+		border: none;
+		line-height: normal;
+	}
+	.modal-login .btn:hover, .modal-login .btn:focus {
+		background: #3598dc;
+	}
+	.modal-login .modal-footer {
+		background: #3598dc;
+		border-color: #dee4e7;
+		text-align: center;
+		margin: 0 -20px -20px;
+		border-radius: 5px;
+		font-size: 13px;
+		justify-content: center;
+	}
+	.modal-login .modal-footer a {
+		color: #000;
+	}
+	.trigger-btn {
+		display: inline-block;
+		margin: 100px auto;
+	}
+</style>
+</head>
+<body OnLoad="swapPic()">
+  <nav class="navbar navbar-default navbar-expand-lg navbar-light">
+  	<div class="navbar-header">
+  		<a class="navbar-brand" href="#">Bank<b>Name</b></a>
+  		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+  			<span class="navbar-toggler-icon"></span>
+  			<span class="icon-bar"></span>
+  			<span class="icon-bar"></span>
+  			<span class="icon-bar"></span>
+  		</button>
+  	</div>
+  	<!-- Collection of nav links, forms, and other content for toggling -->
+  	<div id="navbarCollapse" class="collapse navbar-collapse">
+  		<ul class="nav navbar-nav">
+  			<li><a href="/sessions/new">Home</a></li>
+  			<li><a href="#">About</a></li>
+
+  			<li class="active"><a href="#">Contact Us</a></li>
+        <li class="active"><a href="#myModal" data-toggle="modal">Login</a></li>
+  		</ul>
+  		<form class="navbar-form form-inline navbar-right ml-auto">
+  			<div class="input-group search-box">
+  				<input type="text" class="form-control">
+  				<span class="input-group-btn">
+  					<button type="button" class="btn btn-primary"><span>Search</span></button>
+  				</span>
+  			</div>
+  		</form>
+      </div>
+  </nav>
+    <div class = "img">
+       <img name ="randimg" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4130593946,1518582857&fm=26&gp=0.jpg">
+    </div>
+    <form  class = "button1">
+        <input type="image"
+         src="http://v.icbc.com.cn/userfiles/Resources/ICBC/shouye/images/2017/serveTop1_1.png"
+         height="50"
+        />
+
+   </form>
+   <form  class = "button2">
+        <input type="image"
+         src="http://v.icbc.com.cn/userfiles/Resources/ICBC/shouye/images/2017/serveTop3_1.png"
+         height="50"
+        />
+    </form>
+    <form  class = "button3">
+        <input type="image"
+         src="http://v.icbc.com.cn/userfiles/Resources/ICBC/shouye/images/2017/serveTop4_1.png"
+         height="50"
+        />
+    </form>
+    <form class = "b1">
+        <label for="bt1">Q&A</label>
+    </form>
+    <form class = "b2">
+        <label for="bt2">Reserve</label>
+    </form>
+    <form class = "b3">
+        <label for="bt3">Transfer</label>
+    </form>
+    <form class = "advertisement1">
+        <label for="ad">Welcome To</label>
+    </form>
+    <form class = "advertisement2">
+        <label for="ad">Bank Name</label>
+    </form>
+
+
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
+    <script language="javascript" type="text/javascript">
+        var ranl = 0;
+        var useRand = 0;
+        images = new Array;
+        images[1] = new Image();
+        images[1].src = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=4130593946,1518582857&fm=26&gp=0.jpg";
+        images[2] = new Image();
+        images[2].src = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1539401626,1819352830&fm=26&gp=0.jpg";
+        images[3] = new Image();
+        images[3].src = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2467334516,2958728459&fm=26&gp=0.jpg";
+        images[4] = new Image();
+        images[4].src = "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1659185524,2472192289&fm=26&gp=0.jpg";
+        function swapPic(){
+           var imgnum = images.length-1;
+           do{
+            var randnum = Math.random();
+            randl = Math.round((imgnum-1)*randnum)+1;
+           }while(randl==useRand);
+            useRand = randl;
+            document.randimg.src = images[useRand].src
+            setTimeout('swapPic()',1500);
+        }
+    </script>
+
+<div id="myModal" class="modal fade">
+	<div class="modal-dialog modal-login">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Login Page</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+					<div class="form-group">
+            <%= bootstrap_form_with(url: login_path, scope: :session, local: true) do |f| %>
+                <%= f.text_field :username,:value => "test1000"%>
+                <%= f.password_field :password,:value => "123456" %>
+                <div class="form-group">
+                      <%= f.submit "Log in", data: {confirm: "Please use the mobile Application for 2FA Authentication."}, class: 'btn btn-primary' %>
+                </div>
+            <% end %>
+			</div>
+			<div class="modal-footer">
+				<a href="#">Forgot Password?</a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
